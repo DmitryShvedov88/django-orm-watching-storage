@@ -65,7 +65,4 @@ def is_visit_long(visit, minutes=60):
         localtime = django.utils.timezone.localtime()
         duration = localtime-entered_at
     duration = int((duration.total_seconds())//minutes)
-    if duration > 60:
-        return True
-    else:
-        return False
+    return duration > 60
